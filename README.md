@@ -309,7 +309,7 @@ SocketClient.doUpload("http://192.168.1.109:8080/HttpService/upload",map, new Mu
 #####5.Cookie
 在配置Globalconfiguration时,useCookie设为true,将会自动处理Cookie;
 #####6.同步与异步
-BsinceEvent在submit时，设置了调应回调ResponseListener时，为异步调用，不传入参数时，是为同步调用。
+BsinceEvent在submit时，设置了对应回调ResponseListener时，为异步调用，不传入参数时，是为同步调用。
 ```Java
 String s =EventPublisher.connect(String.class, "/HttpService/habit")
                         .data(ds)
