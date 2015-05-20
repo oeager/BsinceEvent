@@ -1,5 +1,5 @@
 # BsinceEvent
->>这是一个基于HttpUrlConnection的Android异步网络框架。其最初的架构思想基本上都来自于Volley,但后来改动了不少东西，与最初面貌早已差异不小。所以单独拿出来作为一个项目，并会继续维护下去。<br>
+这是一个基于HttpUrlConnection的Android异步网络框架。<br>
 
 
 ##特点:
@@ -23,7 +23,7 @@
 >>waitting...<br>
 
 ####2.配置
->>你需要在你项的Application的子类中（如果没有继承自该类，需要建类继承，并在Manifest文件中注册）的oncreate方法中进行相关参数的配置.
+你需要在你项的Application的子类中（如果没有继承自该类，需要建类继承，并在Manifest文件中注册）的oncreate方法中进行相关参数的配置.
 ```Java
 public class AppContext extends Application {
     @Override
@@ -65,7 +65,7 @@ EventPublisher.init(globalConfiguration);
 ```
 
 ####3.调用
->>完成如上配置后，你就可以愉快地开发了。比如
+完成如上配置后，你就可以愉快地开发了。比如
 #####Get请求
 ```Java
  EventPublisher.connect(String.class, "http://www.baidu.com")
