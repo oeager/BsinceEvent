@@ -105,7 +105,7 @@ EventPublisher.init(globalConfiguration);
 ```
 `注意:在使用EventPublisher.Connect("")时,未指定method将会被默认成GET请求，上面示例中FormEncodeDataset是用于封装请求参数的实体类，Get请求也可以使用.data()方法来指定请求参数，请求参数将默认以表单提交的方式追加到Url后面`
 
->>如果你的返回类型不是String类型,你还必须为其指定一个parser作为解析器,我们为你提供以下几种默认的解析器，以便你针对不同情况时使用：
+如果你的返回类型不是String类型,你还必须为其指定一个parser作为解析器,我们为你提供以下几种默认的解析器，以便你针对不同情况时使用：
 * BitmapParserImp     //默认解析后返回Bitmap对象
 * FileDownloadParser     // 默认解析后返回文件对象
 * JSONArrayParserImp      //抽象类，返回jsonArray由你去实现将其转换为javaBean对象
