@@ -18,12 +18,19 @@
 
 ####1.添加引用
 * Eclipse <br>
->>下载jar文件，添加至项目的libs目录下.<br>
+下载jar文件[Download](https://github.com/oeager/BSinceEvent/raw/master/Download/BSinceEvent_1.0.3.jar)，添加至项目的libs目录下.<br>
 * Gradle<br>
->>waitting...<br>
+在build.gradle文件中如下配置<br>
+
+```gradle
+dependencies {
+      compile 'com.bsince.event:library:1.0.3'
+  }
+```
+  <br>
 
 ####2.配置
-你需要在你项的Application的子类中（如果没有继承自该类，需要建类继承，并在Manifest文件中注册）的oncreate方法中进行相关参数的配置.
+你需要在你项的Application的子类中（如果没有继承自该类，需要建类继承，并在Manifest文件中注册）的oncreate方法中进行相关参数的配置.<br>
 ```Java
 public class AppContext extends Application {
     @Override
@@ -58,7 +65,8 @@ public class AppContext extends Application {
     }
 }
 ```
-上面的每一项配置都不是必须的，因为程序会默认一个值，如果你不想改变它，可以直接像下面这样
+<br>
+上面的每一项配置都不是必须的，因为程序会默认一个值，如果你不想改变它，可以直接像下面这样<br>
 ```Java
 HttpGlobalConfiguration globalConfiguration= new HttpGlobalConfiguration.Builder().build(this);
 EventPublisher.init(globalConfiguration);
