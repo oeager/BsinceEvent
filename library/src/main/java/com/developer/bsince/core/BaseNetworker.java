@@ -31,7 +31,7 @@ import com.developer.bsince.core.assist.PoolingByteArrayOutputStream;
 import com.developer.bsince.data.IDataSet;
 import com.developer.bsince.event.Event;
 import com.developer.bsince.event.HttpEventImp;
-import com.developer.bsince.exceptions.NoConnectException;
+import com.developer.bsince.exceptions.ConnectFailedException;
 import com.developer.bsince.exceptions.ServerErrorException;
 import com.developer.bsince.exceptions.UnAuthorizationException;
 import com.developer.bsince.extras.IOHelper;
@@ -182,8 +182,8 @@ public class BaseNetworker implements IWork {
 			} catch (IOException e) {
 
 				if (inputStream == null) {
-					throw new NoConnectException(
-							"unable to connect to server",e);
+					throw new ConnectFailedException(
+							"connect to server failed",e);
 				}
 				String errorInfo = IOHelper.streamToString(inputStream);
 
